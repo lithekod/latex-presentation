@@ -1,0 +1,42 @@
+målgrupp
+ kandidat?
+ inga förkunskaper
+ vill använda men inte vet hur?
+ mer pragmatiskt
+dela upp i två timmar?
+ timme 1: grunder som alla behöver
+ timme 2: avancerade delar som kanske inte alla behöver
+tidslängd?
+ 30/10/30
+ actually short introduction to latex
+
+latäx
+varför latex istället för word / gdocs
+kompendium, publicera source
+walkthrough, från inget till klar
+gå igenom standardsaker för en rapport
+ figurer
+  alignment
+  resize
+  subfigurer
+ referenser
+ kodsnippets
+ sections/subsections
+ matematik
+hur faktiskt skriver man? några ideer?
+coola grejer
+ tikz
+  grafer
+  automata
+felmeddelanden
+ vad i helvete är en hbox och varför är den stor
+mallar
+ gör vi en mall? nej, brukar finnas i kurserna
+bib
+byggsystem
+ latexmk
+olika texmotorer
+ vilken ska jag använda?
+ använd overleaf, honestly. lokalt om det verklgein behövs
+läs mer
+ not so short introduction

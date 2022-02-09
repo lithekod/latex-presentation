@@ -1,0 +1,59 @@
+\documentclass{beamer}
+
+\definecolor{lkblue}{HTML}{1EC6BA}
+\definecolor{lkbg}{HTML}{202020}
+
+\definecolor{alertred}{HTML}{dc4c55}
+\definecolor{alertblue}{HTML}{5889DF}
+\definecolor{alertgray}{HTML}{505050}
+
+\usecolortheme[RGB={30, 198, 186}]{structure}
+\setbeamercolor{normal text}{fg=white, bg=black!87}
+
+\setbeamertemplate{itemize items}[circle]
+
+\def\arraystretch{1.2}%  1 is the default, change whatever you need
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{soul}
+
+\usetikzlibrary{arrows, positioning}
+
+\title[Git]{An actually short introduction to \LaTeX}
+%\subtitle{}
+\author{LiTHe kod \\ 2022}
+\date{}
+
+\logo{\vspace{-2.0em}\includegraphics[width=.06\textwidth]{watermark.png}\hspace*{.93\paperwidth}}
+
+\newcommand{\temporalgray}[2]{\temporal<#1>{\phantom{#2}}{#2}{\textcolor{gray}{#2}}}
+\newcommand{\keyword}[1]{\hspace{-1.0em}\textcolor{lkblue}{\textbf{#1}}\vspace{0.2em}} % yikes
+\newcommand{\command}[1]{\colorbox{black!78}{\vphantom{Ep}\texttt{\textcolor{gray}{\$}
+\textcolor{white}{#1}}}}
+
+\begin{document}
+
+\frame{\titlepage}
+\frame{\tableofcontents}
+
+%TODO about us
+
+\begin{frame}[fragile]
+  \frametitle{LiTHe kod}
+
+  woooo
+
+  % Your one stop shop for Game Jams, competitive programming, meetups and other coding related events.
+
+  % \vspace{2.0em}
+  % \textbf{Applications are open for the 21/22 board!} \\
+  % Mail any questions to \texttt{ordf@lithekod.se} \\
+\end{frame}
+
+\end{document}
