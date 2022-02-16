@@ -15,6 +15,7 @@
 \def\arraystretch{1.2}%  1 is the default, change whatever you need
 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \usepackage{fancyvrb}
 \usepackage{hyperref}
@@ -23,9 +24,17 @@
 \usepackage{graphicx}
 \usepackage{soul}
 
+% \usepackage{roboto}
+\usepackage[scaled=0.8]{roboto-mono}
+\usepackage{listings} % code listings
+\lstset{basicstyle=\ttfamily\footnotesize}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
 \usetikzlibrary{arrows, positioning}
 
-\title[Git]{An actually short introduction to \LaTeX}
+\title{\LaTeX\\An actually short introduction}
 %\subtitle{}
 \author{LiTHe kod \\ 2022}
 \date{}
@@ -42,18 +51,139 @@
 \frame{\titlepage}
 \frame{\tableofcontents}
 
-%TODO about us
+\section{About us}
 
 \begin{frame}[fragile]
   \frametitle{LiTHe kod}
 
-  woooo
+    \begin{itemize}
+        \item Game jams
+        \item Weekly meetups
+        \item Competitive programming
+        \item Other coding-related events
+    \end{itemize}
 
-  % Your one stop shop for Game Jams, competitive programming, meetups and other coding related events.
+    \vspace{2em}
 
-  % \vspace{2.0em}
-  % \textbf{Applications are open for the 21/22 board!} \\
-  % Mail any questions to \texttt{ordf@lithekod.se} \\
+    Board applications are open for 22/23! \url{lithekod.se/contact} or email to
+    \texttt{ordf@lithekod.se}.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Writing \LaTeX --- The absolute minimum}
+
+    \begin{columns}[T] % align columns
+      \begin{column}{.48\textwidth}
+        \begin{lstlisting}
+\documentclass{article}
+
+\begin{document}
+    Hello world!
+\end{document}
+        \end{lstlisting}
+      \end{column}%
+      \hfill%
+      \begin{column}{.48\textwidth}
+          {
+          \setbeamercolor{normal text}{fg=black}
+          \usebeamercolor[fg]{normal text}
+          \colorbox{white}{\includegraphics[width=\linewidth]{helloworld.pdf}}
+          }
+      \end{column}%
+    \end{columns}
+
+    Not very fun
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Writing \LaTeX --- Writing some text}
+
+    \begin{columns}[T] % align columns
+      \begin{column}{.48\textwidth}
+        \begin{lstlisting}
+\documentclass{article}
+
+\begin{document}
+In this paper I will argue for
+the inclusion of how to pet cats
+in grundskolan.
+\end{document}
+        \end{lstlisting}
+      \end{column}%
+      \hfill%
+      \begin{column}{.48\textwidth}
+          {
+          \setbeamercolor{normal text}{fg=black}
+          \usebeamercolor[fg]{normal text}
+          \colorbox{white}{\includegraphics[width=\linewidth]{cats-oneline.pdf}}
+          }
+      \end{column}%
+    \end{columns}
+
+    Now we're getting somewhere.
+
+    Notice: we can insert newlines.
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Writing \LaTeX --- Creating structure}
+
+    \begin{tabular}{l l}
+        LaTeX-code & Result \\\hline
+        \pause{}
+        \texttt{\textbackslash{}section}\textbraceleft{}Regarding cats\textbraceright{}
+        & 3. Regarding cats \\
+        \pause{}
+        \texttt{\textbackslash{}subsection}\textbraceleft{}Nice properties\textbraceright{}
+        & 3.5 Nice properties \\
+        \pause{}
+        \texttt{\textbackslash{}subsubsection}\textbraceleft{}They are soft\textbraceright{}
+        & 3.5.20 They are soft \\
+        \pause{}
+    \end{tabular}
+
+    \begin{lstlisting}
+\section{Abstract}
+In this paper blablabla
+
+\section{Introduction}
+Heyo
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Writing \LaTeX --- Creating structure}
+
+    \begin{columns}[T] % align columns
+      \begin{column}{.48\textwidth}
+        \begin{lstlisting}
+\documentclass{article}
+
+\begin{document}
+\section{Abstract}
+In this paper I will argue for
+the inclusion of how to pet cats
+in Sweden's grundskola.
+
+\section{Introduction}
+\subsection{Cats}
+\subsection{Grundskolan}
+\section{Why cats?}
+\section{Why grundskolan?}
+\section{Conclusion}
+\end{document}
+        \end{lstlisting}
+      \end{column}%
+      \hfill%
+      \begin{column}{.48\textwidth}
+        % TODO insert result
+        %      maybe below?
+      \end{column}%
+    \end{columns}
+
 \end{frame}
 
 \end{document}
